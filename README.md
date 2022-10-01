@@ -1,5 +1,11 @@
 # Interview-Questions
 
+MindTree - 
+1. Write code where to allocate memory for integer variable and integer array
+2. How to delete the allocated memeory above
+3. Which Collection object is best for the to search the elements from the the list 
+4. Write class A, with all possible functions in it
+ 
 Mobileum - 
   1. grep command usage
   2. netstat command usage 
