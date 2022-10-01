@@ -1,0 +1,64 @@
+ 
+ int *number = new int();
+ int *array = new int(10);
+ 
+ delete(number);
+ 
+ delete[](array);
+ 
+ 
+ Operations are
+ 1. Searching
+ 
+ list O(n)
+ map logn
+ array O(1)
+ hash  O(1) - 
+ 
+ mindtree
+ customer - 
+ 
+ 
+ class A
+ {
+	private:
+	int *number;
+	
+	A()
+	{
+		number = new int();
+		number = 0;
+	}
+	
+	// copy construction
+	A(const A& a)
+	{
+		number = new int();
+		*number = a.number;
+	}
+		
+	A& operator=(const A& a)
+	{
+		*number = a.number;
+	}
+	A(int no)
+	{
+	   number = new int();
+	  *number = no
+	}
+	
+	void setNumber(int no)
+	{
+		*number = no;
+	}
+	
+	int getNumber()
+	{
+	    return *number;
+	}
+	
+	~A()
+	{
+		delete number;
+	}	
+ };
