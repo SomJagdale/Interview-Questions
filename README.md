@@ -49,6 +49,21 @@ Problems
 Honeywell
 Problem - Move linked list to the right by k
     		- Server client socker programes 
+Design - How two process update one single file ?
+Which Linux services used by the Docker to implement container isolation?
+
+
+HCL Technologies
+1. Design Problem - Three classes Keyboard Keystrock monitor, controller, and database 
+How controller save key strock in database, controller has objects of Monitor and Database
+2. Struc containing device id stored in Vector, how to access it quickely ?
+3. difference between c++ struct and c++ class ?
+Members of a class are private by default.	Members of a structure are public by default. 
+It is normally used for data abstraction and further inheritance.	It is normally used for the grouping of data
+4. does map key can be a user defined data type?
+5. how to debug the core dump file
+6. difference between global static variable vs local static variable?
+
 
 
 		
