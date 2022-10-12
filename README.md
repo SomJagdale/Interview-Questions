@@ -363,70 +363,33 @@ Ans :   main entry
 		    [...]
 		};
  
-
 #include <iostream>
-
 #include<memory>
-
 using namespace std;
-
- 
-
 void fun(unique_ptr<int> p)
-
 {
-
     cout <<"fun = " << *p<<endl;
-
 }
-
- 
-
 unique_ptr<int> Fun1()
-
 {
-
     cout<<"Fun1"<<endl;  //temp obj is return so internally move called
-
     return make_unique<int>(100);
-
 }
-
- 
-
 int main() {
-
     // Write C++ code here
-
     cout<<"Hello"<<endl;
-
    unique_ptr<int> p=make_unique<int>(10);
-
    fun(std::move(p)); //pass unique pointer
-
-  
-
    unique_ptr<int> p1 = Fun1();   //Return unique Pointer from function
-
    cout<< "p1 = "<<*p1;
-
-  
-
    unique_ptr<int> p2=make_unique<int>(1000);
-
    unique_ptr<int> p3;
-
    // p3=p2;    // use of deleted function "operator="
-
     return 0;
-
 }
-
 8.       Any example of weak pointer?
-
-9.       How to avoid increase the reference count when we pass shared pointer in methos?
-
-Ans : use shared parameter reference or pointer as a parameter.
+9.       How to avoid increase the reference count when we pass shared pointer in methods?
+         Ans : use shared parameter reference or pointer as a parameter.
 
 10.   Lamba Expression Que: [=], [&] , How to  pass by ref, pass by val in lamba captcha? How to pass value as const in lambda expression. whole study of lambda .
 
@@ -435,99 +398,47 @@ Ans : use shared parameter reference or pointer as a parameter.
 a.       Ans :   []()->int{}
 
 12.   User defined class and used set container to set user defined class .How to insert data in sorted order in set.
-
 a.       Ans : use operator < overloading
 
 class Emp
-
 {
-
     public:
-
     int id;
-
     Emp(int val): id(val){}
-
-   
-
     first approach overloas operator<
-
     bool operator<(const Emp& obj) const
-
     {
-
         return this->id < obj.id;
-
     }
-
 };
-
- 
-
 int main() {
-
     // Write C++ code here
-
     cout<<"Hello"<<endl;
-
     set<Emp> data;
-
     data.insert(Emp(21));
-
     data.insert(Emp(14));
-
     data.insert(Emp(41));
-
     for(auto t: data)
-
     {
-
         cout<< t.id<< " ";
-
     }
-
 }
-
 b.       Second one is lambda
-
 Auto cmp = [](){}
-
 Set<Class> setData (cmp);
-
- 
-
 #include <set>
-
 #include <iostream>
-
 #include <iterator>
-
 #include <algorithm>
-
- 
-
 int main()
-
 {
-
   auto comp = [](int x, int y){ return x < y; };
-
   auto set  = std::set<int,decltype(comp)>( comp );
-
- 
-
   set.insert(1);
-
   set.insert(10);
-
   set.insert(1); // Dupe!
-
   set.insert(2);
-
- 
-
   std::copy( set.begin(), set.end(), std::ostream_iterator<int>(std::cout, "\n") );
-
 }
 
  
