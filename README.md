@@ -219,269 +219,149 @@ Inheritance - Its the relationship between classes.
     Ans : Shared pointer
 	Que: why shared pointer and not unique pointer
 	
-5.       Time complexity of std::sort() method?
-
-Ans:  O(N log(N))
-
-Binary Search = O(log n)
+5.   Time complexity of std::sort() method?
+	O(N log(N))
+	Binary Search = O(log n)
 
 6.       Find out min max value in const time?
-
-Ans; As per my knowledge unorder_set can use which used internally hash Data structure.
-
-Need to check it on.
-
+	Ans - unorder_set can use which used internally hash Data structure.
 I implememted vector and use sort method but that will not give u result in const time
-
- 
 
 EPAM Company
 1.       Is it possible function overloading/static polymorphisam.
-
- 
-
 class Base
-
 {
-
      public:
-
      int add()     //error note: previous declaration 'int Base::add()'
-
      {
-
          cout <<"return int";
-
          return 0;
-
      }
-
      double add()     // error: 'double Base::add()' cannot be overloaded with 'int Base::add()'
-
      {
-
          cout <<"return double";
-
          return 1.1;
-
      }
-
 };
 
 Ans :Not possible to override.
-
- 
-
 2.       What will be result? Which class add() method will get call
-
 #include <iostream>
-
 using namespace std;
-
- 
-
 class Base
-
 {
-
      public:
-
      virtual void add(int i)
-
      {
-
          cout <<"Base"<<endl;
-
      }
-
- 
-
 };
-
- 
-
 class Derived: public Base
-
 {
-
     public:
-
     void add(int i, int j)
-
     {
-
         cout <<"Derived"<<endl;
-
     }
-
 };
-
- 
-
 int main() {
-
     Base* obj = new Derived;
-
     obj->add(1);     Ans: Base class add() method will get call
-
     return 0;
-
 }
-
- 
 
 3.       What is mean by override? Final? Can we use final in method and class
-
-Ans: final keywork can use for class and method also.
-
+	Ans: final keywork can use for class and method also.
 4.       Is it possible to write only try block and not catch?
-
 a.       int main() {
-
               try
-
               {
-
-                }
-
+              }
               return 0;
-
-}
-
+	      }
 b.       try
-
     {
-
         throw 1;
-
     }
-
 Ans : Above both case will give error  , error: expected 'catch' before '}'
 
 5.       what is the output? And is int get converts into double in catch bliock of second?
-
 // Online C++ compiler to run C++ program online
-
 #include <iostream>
-
 using namespace std;
-
- 
-
 void last()
-
 {
-
     cout<<"last entry"<<endl;
-
     throw 1;
-
     cout << "last exit"<<endl;
-
 }
-
 void second()
-
 {
-
     cout<<"Second Entry"<<endl;
-
     try
-
     {
-
         last();
-
     }
-
     catch(double d)
-
     {
-
         cout<< "Second Catch = "<< d<<endl;
-
     }
-
     cout<<"second exit"<<endl;
-
 }
 
 void first()
-
 {
-
     cout<<"First Entry"<<endl;
-
     try
-
     {
-
         second();
-
     }
-
     catch(int i)
-
     {
-
         cout<< "First Catch int = "<< i<<endl;
-
     }
-
     catch(double d)
-
     {
-
         cout<< "First Catch double = "<< d<<endl;
-
     }
-
     cout<<"first exit"<<endl;
-
 }
-
- 
-
 int main() {
-
     // Write C++ code here
-
     std::cout << "main entry"<<endl;
-
     try
-
     {
-
         first();
-
     }
-
     catch(int i)
-
     {
-
         cout<< "main catch int="<< i<<endl;
-
     }
-
     cout<<"main exit"<<endl;
-
     return 0;
-
 }
-
- 
-
-Ans : First Catch int = 1 wil  get call.
+Ans :   main entry
+	First Entry
+	Second Entry
+	last entry
+	First Catch int = 1
+	first exit
+	main exit
 
 6.       What is mean by unique pointer, shared pointer and weak pointer?
-
+         check in cpp code base repo
 7.       Can we pass unique pointer as a parameter in method? can we return unique pointer from method? If we have unique pointer p3=p2 ? is it possible?
 
- 
-
-Ans : operator = and copy ctr both are default deleted in unique pointer .
-
+	Ans : operator = and copy ctr both are default deleted in unique pointer .
+		class UserQueues 
+		{
+		    public:
+			explicit UserQueues();
+			UserQueues(const UserQueues&) = delete;
+			UserQueues& operator=(const UserQueues&) = delete;
+			~UserQueues() = default;
+		    [...]
+		};
  
 
 #include <iostream>
