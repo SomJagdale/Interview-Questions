@@ -51,221 +51,116 @@ Persistent Company[assessment Round]
 
 Dassault Systems [1st Round]
 1.        
-
 class CopyDemo
-
 {
-
               int Salary;
-
-             
-
-              public:
-
+             public:
               CopyDemo(const CopyDemo& other)
-
               {
-
               }
-
- 
-
               void SetSalary(int val)
-
               {
-
                              Salary = val;
-
               }
-
 };
 
- 
-
 void fun(const CopyDemo& obj)
-
 {
-
               obj.SetSalary(100);   //Does salary will set here or not?  Ans: no error: passing 'const CopyDemo' as 'this' argument discards qualifiers [-fpermissive]
-
 }
-
- 
-
 int main() {
 
     // Write C++ code here
 
     std::cout << "Hello world!";
-
     CopyDemo obj1;
-
               fun(obj1);
-
     return 0;
-
 }
 
-2.       Create class design or classes for chess in c++ [need to check it]
-
+2. Create class design or classes for chess in c++ [need to check it]
 class Player
-
 {
-
               string name;
-
               bool win;           
-
 }
-
- 
-
 class ChessBoard
-
 {
-
-              map<hourse, moves> map;
-
+	map<hourse, moves> map;
 }
-
- 
 
 3.       Create class design or classes for folder and files structur in c++
 
 a.       Ans:
-
 class File
-
 {
-
               string fileName;
-
               string filePath;
-
 }
-
- 
-
 class Folder
-
 {
-
               string folderName;
-
               string folderPath;
-
-             
-
               set<File> files;  //used composition relationship
-
               set<Folder*> Folders; //used composition relationship
-
 }
-
- 
 
 4.       What is mean by interface?
-
+	 An interface in the C++ programming language is an class contain all methods pure virutal methods.
+	
 5.       How to write down the code for memory leak?
-
-a.       Ans : write down the class and inside that create pointer and new it but don’t delete it
+	 void f()
+	{
+	   int *ptr = (int *) malloc(sizeof(int));
+	   return; /* Return without freeing ptr*/
+	}
+	Write down the class and inside that create pointer and new it but don’t delete it
 
 class CopyDemo
-
 {
-
-                                           int* data;
-
- 
-
+             int* data;
              public:
-
              copyDemo(int val)
-
              {
-
                             data = new int(val);
 
              }
-
-            
-
              ~CopyDemo()
-
              {
-
                             //delete data;  if not delete then memory leak
-
                             //data = nullptr;
-
              }
-
 };
-
- 
-
 int main()
-
 {           
-
 CopyDemo obj(10); //out of scope destr called but data object not delete //there so memory leak.
-
 }
 
-6.       Write down swap function using reference and pointer
+6.  Write down swap function using reference and pointer
 
 Ans : void swap(int* a, int* b)
-
 {
-
               int temp = *a;
-
               *a = *b;
-
               *b = temp;
-
 }
-
- 
-
 int main()
-
 {
-
               int a = 10, b = 20;
-
               swap(&a, &b);
-
               std::cout<< a << " " << b;  //a=20, b=10
-
               return 0;
-
 }
 
 7.       Write the program whete 100 elements are there and sort that based on salary
-
-Ans:
-
 class CopyDemo
-
 {
-
               int Salary;          
-
 };
-
- 
-
 int main()
-
-{            
-
+{           
               std::vector<CopyDemo> vec(100);
-
               vec.push_back() //till ;...100
-
-             
-
               std::sort(vec.begin(), vec.end(),
 
                              [](const auto& a, const auto& b)
