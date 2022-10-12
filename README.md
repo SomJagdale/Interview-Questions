@@ -161,149 +161,64 @@ int main()
 {           
               std::vector<CopyDemo> vec(100);
               vec.push_back() //till ;...100
-              std::sort(vec.begin(), vec.end(),
-
-                             [](const auto& a, const auto& b)
-
+              std::sort(vec.begin(), vec.end(), [](const auto& a, const auto& b)
                              {            
-
                                            return   a.Salary < b.Salary;
-
                              });         
-
 }
-
- 
 
 CRISIL Company
 1.       What is the difference between DOM parser and SAP parser?
-
 2.       Templates has int, string…but return only int value?
 
- 
-
 template<typename T>
-
 T fun(T val)
-
 {
-
-                            
-
 }
-
- 
-
 fun<int>(10);
-
 fin<string>("A")
-
- 
-
 Ans : Use Template Specialization
-
- 
-
 #include <iostream>
-
 #include <iostream>
-
 using namespace std;
-
- 
-
 template <class T>
-
 T fun(T a)
-
 {
-
-cout << "The main template fun(): "
-
-                             << a << endl;
-
-                           
-
+cout << "The main template fun(): "<< a << endl;
                              return a;
-
 }
-
- 
-
 template<>
-
 int fun(int a)
-
 {
-
               cout << "Specialized Template for int type: "
-
                              << a << endl;
-
-                            
-
                              return a;
-
 }
-
- 
-
 int main()
-
 {
-
               fun<char>('a');
-
               fun<int>(10);
-
               fun<float>(10.14);
-
-             
-
               return 0;
-
 }
 
 3.       Which one is better Inheritance or composition?
-
 Ans: Composition - has-a relationship between objects.
-
 Inheritance - is-a relationship between classes.
-
- 
-
+	We expose all the superclass methods to the other classes having access to subclass. So if a new method is introduced or there are security holes in the superclass, subclass becomes vulnerable. Since in composition we choose which methods to use, it's more secure than inheritance
 Composition - Composing object holds a reference to composing classes and hence relationship is loosely bound.
-
 Inheritance - Derived object carries the base class definition in itself and hence its tightly bound.
-
- 
-
 Composition - Used in Dependency Injection
-
 Inheritance - Used in Runtime Polymorphism
-
- 
-
 Composition - Single class objects can be composed within multiple classes.
-
 Inheritance - Single class can only inherit 1 Class.
-
- 
-
 Composition - Its the relationship between objects.
-
 Inheritance - Its the relationship between classes.
-
- 
-
-Prefer composition over inheritance as it is more malleable / easy to modify later, but do not use a compose-always approach. With composition, it's easy to change behavior on the fly with Dependency Injection / Setters. Inheritance is more rigid as most languages do not allow you to derive from more than one type.
-
-4.       For the threaded application which smart pointer will use? Is Unique pointer or shared pointer thread safe
-
-I told Ans : Shared pointer
-
-Que: why shared pointer and not unique pointer
-
+	
+4.   For the threaded application which smart pointer will use? Is Unique pointer or shared pointer thread safe
+    Ans : Shared pointer
+	Que: why shared pointer and not unique pointer
+	
 5.       Time complexity of std::sort() method?
 
 Ans:  O(N log(N))
