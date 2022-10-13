@@ -1,5 +1,17 @@
 # Interview-Questions
 
+Mathworks
+
+1. What is Inode?
+2. 32-bit vs 64-bit machine?
+	A 32-bit system can access 232 different memory addresses, i.e 4 GB of RAM or physical memory ideally, it can access more than 4 GB of RAM also. 
+	A 64-bit system can access 264 different memory addresses, i.e actually 18-Quintillion bytes of RAM. In short, any amount of memory greater than 4 GB can be easily handled by it.
+3. Sort a given Queue without extra space.
+4. The maximum sum of the array without taking two adjacent elements.
+
+
+
+
 Persistent Company[assessment Round]
 1.       Where and how used stack in ur application?
 	 1. To verify matching paranthesisi is present in the expression or not
