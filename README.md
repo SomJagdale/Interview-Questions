@@ -1112,6 +1112,18 @@ It is normally used for data abstraction and further inheritance.	It is normally
 5. how to debug the core dump file
 6. difference between global static variable vs local static variable?
 
+PLA
+	
+matwrk 
+	
+suru
+
+skifive
+1. How to restrict to inherit specifc class or create objet of that class
+2. Singleton design pattern implementation
+3. Code Coverage tool - BullsEye
+4. Memory or Address Sanitiser 
+5. Memory Leake
 
 
 		
