@@ -1147,5 +1147,11 @@ L&T
 
 HCL
 
+Tech Mahindra
+1. Write Code to reverse the Linkedlist
+2. Set the bit
+3. Reset the bit
+4. Difference between Static and External variable
+5. Difference between Lock and Mutex 
 
 		
