@@ -1153,5 +1153,6 @@ Tech Mahindra
 3. Reset the bit
 4. Difference between Static and External variable
 5. Difference between Lock and Mutex 
-
+7. How to evaluate core dump file
+8. How to use gdb while developemnt
 		
