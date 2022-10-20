@@ -1132,6 +1132,37 @@ KLA
 BOA
 
 Mathwork
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+using namespace std;
+class Solution {
+public:
+	static bool funct(int a, int b){
+		return a>b;
+	}
+	vector<int> getSortedVector(vector<int> V) {
+		int n = V.size();
+		vector<int> idx(n,0);
+		iota(idx.begin(),idx.end(),0);		
+		for(auto v : idx)  {
+		cout << v << " ";
+	}	
+		sort(V.begin(),V.end(),funct) ;
+		return V;
+	};
+};
+
+int main() {	
+	vector<int> V {5, 1, 3, 1, 2, 7};
+	Solution s;
+	V = s.getSortedVector(V);
+	for(auto v : V)  {
+		cout << v << " ";
+	}
+	return 0;
+}
 
 Tech Mahendra
 
