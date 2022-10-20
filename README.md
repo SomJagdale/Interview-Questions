@@ -1163,7 +1163,14 @@ int main() {
 	}
 	return 0;
 }
+#include <iostream>
 
+int main() {    
+    int X = 1;
+    X++ = 2;
+    std::cout << X << std::endl;
+}
+	
 Tech Mahendra
 
 Microservice 
@@ -1178,6 +1185,7 @@ L&T
 
 HCL
 
+	
 Tech Mahindra
 1. Write Code to reverse the Linkedlist
 2. Set the bit
