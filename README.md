@@ -1179,6 +1179,107 @@ NSEIT
 
 Caterpillor 
 
+
+class Singlton
+{
+	private:	
+	Singlton *inst;
+	Singlton(){}
+	
+	public:
+	static Singlton* getInstance()
+	{
+		if (inst == NULL)
+			inst = new Singlton();
+		else 
+			return inst;
+	}	
+	
+};
+
+Singlton Singlton::inst = NULL; 
+int main()
+{
+	Singlton *obj = Singlton::getInstance();
+	
+	uniqu_ptr<int> *ptr = make_unique(int);
+}
+
+
+// STL 	
+	a = b;	
+	operator()()		
+	printf("hello ", a,b,c)
+	
+	add(int a, int b, ...)
+	
+	template<classtype T, ...>
+	class Varidiac
+	{
+	}
+	
+	name_fun(void *ptr)
+	{
+		ClassA a = (ClassA)ptr;
+		
+		ClassB b = new ClassB;
+		exit(b);
+	}		
+	
+	pthread_t thread;
+	
+	pthread_start(&thread, NULL,name_fun,NULL);
+	
+	ClassB *obj;
+	pthread_join(thread,&obj);
+	
+	char a[][] = {"hello","world"};
+	
+	char *str = new char (10);
+	
+	new 
+	delete
+	
+	
+	socket(ip4/ip6, tcp/udp, );
+	
+	bind(sock, ip and port)
+	
+	pd = listen();   client with connect 
+	
+	CLietnsocket s = accept(pd);
+	s.read and s.write
+	
+	
+	#/usr/bin/gdb applicationbin 
+
+	gdb# b filename:lineno
+	cont 
+	cont 
+	print vari
+	set vari
+	jump 
+	threads 
+	thread thred_no
+	
+	
+	core dump 
+	ulimit -c unlimited 
+	
+	gdb applcation core.dump
+	
+	bt 
+	
+	frame 7 
+	print 
+		
+	getFrom(workerthread)
+	lock Profile --- worker thread
+    
+	profile.lock();
+	profile - critical secdtion
+
+	
 alphagrep 
 
 L&T
