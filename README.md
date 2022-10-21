@@ -1179,7 +1179,10 @@ NSEIT
 
 Caterpillor 
 
-
+1. Implement the Singleton class
+2. Benifits of Mutex Lock?
+3. String of String
+4. How to use manage disconnection happend whilse sending messages over tcp connection?
 class Singlton
 {
 	private:	
@@ -1204,7 +1207,6 @@ int main()
 	
 	uniqu_ptr<int> *ptr = make_unique(int);
 }
-
 
 // STL 	
 	a = b;	
@@ -1278,7 +1280,6 @@ int main()
     
 	profile.lock();
 	profile - critical secdtion
-
 	
 alphagrep 
 
