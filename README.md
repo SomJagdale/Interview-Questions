@@ -1314,3 +1314,4 @@ info threads
 thread thread_id
 set env USER = foo
 The raise() function sends a signal to the calling process or thread. In a single-threaded program it is equivalent to kill(getpid(), ...
+code to redundant bracess from the expression 
