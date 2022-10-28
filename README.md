@@ -1297,3 +1297,20 @@ Tech Mahindra
 7. How to evaluate core dump file
 8. How to use gdb while developemnt
 		
+skyhigh
+gcore 
+how to check the staack trace of all thread
+system function 
+fork exec system
+select poll
+abort 
+signal 
+raise 
+vector erase() and clear() in C++
+Networking
+how to imlement non blocking server
+how to identify the connection is status througth wireshark
+info threads 
+thread thread_id
+set env USER = foo
+The raise() function sends a signal to the calling process or thread. In a single-threaded program it is equivalent to kill(getpid(), ...
