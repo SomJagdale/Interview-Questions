@@ -1317,3 +1317,10 @@ The raise() function sends a signal to the calling process or thread. In a singl
 code to redundant bracess from the expression 
 
 HCL Interview 
+1. what is volatile keywork in c++?
+	volatile int a;
+	int volatile a;
+	There are two blocks of code. In the first block the volatile keyword is not present. So for the first case, the variable will be copied from memory to CPU register, then the operations are performed. In the second case the volatile is present. So in this case the variable will not be copied from memory to registers
+	
+2. find how many bits needs to be flip when convert one number to other ? 
+	Do xor operation and count the nubmer of bits of that result
