@@ -1,0 +1,41 @@
+Here are 20 advanced-level interview questions on socket programming to test candidates deep understanding of the topic:
+
+1. Explain the difference between TCP and UDP sockets in terms of reliability, connection, and data transmission. How does socket programming differ for each?
+
+2. What is the significance of the SO_REUSEADDR socket option, and when would you use it?
+
+3. What is the difference between a blocking socket and a non-blocking socket? How would you convert a blocking socket into a non-blocking one in Linux?
+
+4. Explain the purpose of select(), poll(), and epoll(). When would you prefer one over the other, and why?
+
+5. What are the potential pitfalls of using the select() system call, and how does epoll() address them?
+
+6. In a socket server handling multiple clients, how do you handle multiple connections without blocking other connections? Discuss the options available.
+
+7. What are the common socket errors like EAGAIN, EINTR, ECONNRESET, and EPIPE? How should your socket program handle them?
+
+8. Explain the role of the backlog parameter in the listen() system call. What happens when this backlog queue is full?
+
+9. Describe how the SO_RCVBUF and SO_SNDBUF socket options impact the performance of a socket. How would you tune these buffers for high-throughput applications?
+
+10. How does the Nagle’s algorithm work, and when would you want to disable it using the TCP_NODELAY option?
+
+11. Explain how a TCP socket establishes a connection using the three-way handshake. What happens if the client sends data before the handshake is complete?
+
+12. What happens if a client closes its connection without reading the data from the server? What error would the server encounter, and how should it handle this situation?
+
+13. Describe the process of connection teardown in TCP using the four-way handshake. How does the FIN and ACK sequence work during connection termination? What happens if one party doesn’t respond to the FIN?
+
+14. What is the difference between half-close and full-close in TCP sockets? How would you implement a half-close operation, and when is it useful?
+
+15. What is the purpose of the SO_LINGER socket option? How does it affect the behavior of close() on a socket, particularly when there is data in the buffer?
+
+16. Explain what happens when you call shutdown() on a socket. How is it different from close(), and in what scenarios would you use shutdown()?
+
+17. How would you implement a timeout mechanism on socket operations such as recv() or accept()? What are the advantages of using the SO_RCVTIMEO and SO_SNDTIMEO options versus select() for timeouts?
+
+18. What is the TCP_KEEPALIVE socket option, and why is it important for long-lived connections? How can you configure keep-alive settings in a socket program?
+
+19. Describe how IPv6 socket programming differs from IPv4. What changes in address structure and socket creation do you need to account for in a dual-stack application?
+
+20. What are some common strategies for scaling a server that handles thousands of concurrent socket connections? Discuss event-driven I/O, multi-threading, and multi-processing approaches.
