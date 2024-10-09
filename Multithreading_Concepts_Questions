@@ -1,0 +1,3 @@
+A condition variable is a synchronization primitive used in concurrent programming to allow threads to wait for certain conditions to be true. It works in conjunction with a mutex, enabling a thread to pause (or "wait") until another thread signals that the required condition has been met.
+
+The purpose of a condition variable is to efficiently manage situations where a thread must wait for some shared resource or state change, avoiding busy-waiting (continuous checking), and allowing better coordination and communication between threads.
