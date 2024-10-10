@@ -25,4 +25,46 @@ Understanding these will help you master multithreading and synchronization in s
 A condition variable is a synchronization primitive used in concurrent programming to allow threads to wait for certain conditions to be true. It works in 
   conjunction with a mutex, enabling a thread to pause (or "wait") until another thread signals that the required condition has been met.
 
-The purpose of a condition variable is to efficiently manage situations where a thread must wait for some shared resource or state change, avoiding busy-waiting (continuous checking), and allowing better coordination and communication between threads.
+
+Here are 20 advanced multithreading questions that you can use to gauge a candidate's understanding during an interview:
+
+1. What is the difference between a process and a thread?
+2. How does a thread lifecycle differ from a process lifecycle?
+3. Explain the differences between user-level and kernel-level threads.
+4. What are the key differences between preemptive and cooperative multitasking?
+5. Describe the **mutex** and its use in thread synchronization.
+6. What is a **semaphore** and how does it differ from a mutex?
+7. Explain the concept of a **deadlock**. How can it occur in a multithreaded environment?
+8. What are the necessary conditions for a deadlock to occur?
+9. How can you prevent or resolve deadlocks in a multithreading environment?
+10. What is a **race condition**, and how can it be avoided?
+11. Explain **thread contention**. How do you minimize it?
+12. What is a **spinlock** and when would you use it over a regular mutex?
+13. What is a **condition variable**, and how does it improve synchronization?
+14. Compare **busy waiting** with **blocking** in the context of thread synchronization.
+15. What are **read-write locks**, and when would you prefer them over a normal mutex?
+16. How does **thread pooling** help in improving the efficiency of multithreaded programs?
+17. What is the difference between a **context switch** in processes and threads?
+18. Explain **thread affinity** and why it is sometimes necessary.
+19. How do you ensure thread-safe access to shared resources without degrading performance?
+20. How does **lock-free programming** work, and in what scenarios is it necessary?
+21. Explain **lock-free** and **wait-free** algorithms. How are they different?
+22. How do **hazard pointers** and **epoch-based reclamation** prevent memory reclamation issues in lock-free programming?
+23. What is **false sharing** in multithreading, and how can it affect performance?
+24. Explain the **ABA problem** in lock-free algorithms and how it can be resolved.
+25. What are **memory fences/barriers**, and how do they ensure memory ordering in a multithreaded environment?
+26. How do **relaxed, acquire, and release memory orders** differ in C++11 atomics?
+27. What is the **happens-before** relationship in memory models, and how does it affect visibility between threads?
+28. Explain **thread-local storage (TLS)** and its benefits in multithreaded environments.
+29. How does **priority inversion** occur, and what are the common strategies to prevent it?
+30. Compare the performance impact of **mutexes** vs. **spinlocks** in high contention and low contention scenarios.
+31. What are the potential pitfalls of using **condition variables**? How can spurious wakeups be handled correctly?
+32. How do **futures** and **promises** work in C++ or other languages, and how do they help with thread synchronization?
+33. Explain **recursive mutexes**. When should they be avoided?
+34. How do you implement a **thread-safe singleton** in C++ without introducing locking overhead?
+35. Describe how **lock striping** works and how it helps in scaling multithreaded applications.
+36. What is the **fork-join model** of parallelism, and how is it different from a thread pool approach?
+37. Explain **work-stealing algorithms** and their advantages in load balancing across threads.
+38. How does **NUMA (Non-Uniform Memory Access)** architecture affect multithreaded programming, and how can it be optimized?
+39. What is the **epoch-based memory reclamation** method in lock-free programming?
+40. How can you handle **asynchronous exceptions** in a multithreaded environment without causing race conditions?
